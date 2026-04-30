@@ -79,7 +79,7 @@
         <div class="project-card project-card-gallery">
           <div class="project-meta">SOLIDWORKS · 2024 – Present</div>
           <h3>Three-Arm Bearing Puller</h3>
-          <p>A fully constrained SOLIDWORKS assembly modeling a three-jaw bearing puller — the mechanic's tool used to remove press-fit gears and bearings from shafts. Built around a central threaded drive screw and three symmetric arms connected to a center yoke through bolted pivot joints. Demonstrates symmetric mates, threaded-component assembly, and fastener integration.</p>
+          <p>Three-arm bearing puller modeled as a fully-mated SOLIDWORKS assembly with self-centering geometry: a single driving dimension keeps all three arms symmetric about the screw axis, so the tool grips concentrically at any opening width. A threaded mate on the central drive screw produces realistic linear travel under rotation. Built with manufacturing intent: standard fastener sizes, proper clearances at pivot joints, and assembly-ready mating surfaces throughout.</p>
           <div class="cad-gallery">
             <a href="cad-three-arm-puller.png" target="_blank" rel="noopener"><img src="cad-three-arm-puller.png" alt="Three-arm bearing puller assembly" /></a>
           </div>
@@ -93,7 +93,7 @@
         <div class="project-card project-card-gallery">
           <div class="project-meta">SOLIDWORKS · 2024 – Present</div>
           <h3>Articulated Robotic Arm with Parallel-Jaw Gripper</h3>
-          <p>A multi-component articulated robotic arm mounted on a workbench fixture, integrating a parallel-jaw gripper modeled as a separate SOLIDWORKS sub-assembly. The gripper uses a four-bar linkage mechanism to keep the jaw faces parallel as they open and close, driven through synchronized pulleys. Demonstrates assembly hierarchy, sub-assembly integration, and width-mate constraints across multiple linkage joints.</p>
+          <p>Articulated arm with a custom parallel-jaw end effector modeled as a nested sub-assembly. The gripper's design challenge: keep the jaw faces parallel through full open/close travel without using a linear rail. Solved with a four-bar linkage where the coupler link carries the jaw face, chosen for lower part count and easier manufacturing than a rack-and-pinion alternative. Synchronized pulleys drive both linkages from a single actuator, ensuring symmetric closure.</p>
           <div class="cad-gallery">
             <a href="cad-articulated-arm.png" target="_blank" rel="noopener"><img src="cad-articulated-arm.png" alt="Articulated robotic arm assembly with end-effector and table fixture" /></a>
             <a href="cad-gripper.png" target="_blank" rel="noopener"><img src="cad-gripper.png" alt="Four-bar linkage parallel-jaw gripper sub-assembly with mounting bracket" /></a>
