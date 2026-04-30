@@ -7,14 +7,13 @@
 
 :root {
   --bg: #0e0f12;
-  --bg-elev: #16181d;
   --bg-card: #1c1f26;
   --border: #2d3139;
   --text: #f5f5f0;
   --text-dim: #c4c4be;
-  --text-muted: #8b8d92;
   --accent: #f7b955;
   --accent-hover: #ffd27a;
+  --green: #2ea043;
   --mono: 'SF Mono', 'Monaco', 'Inconsolata', 'Roboto Mono', 'Source Code Pro', monospace;
   --sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', system-ui, sans-serif;
 }
@@ -75,7 +74,7 @@ a { color: inherit; text-decoration: none; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 6rem 3rem 2rem;
+  padding: 7rem 3rem 3rem;
   background-image:
     linear-gradient(rgba(255, 255, 255, 0.025) 1px, transparent 1px),
     linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
@@ -108,7 +107,6 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 1.5rem;
 }
 
-/* ===== Hero bio ===== */
 .hero-bio {
   margin: 1.5rem 0 0;
   max-width: 700px;
@@ -125,7 +123,6 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 0;
 }
 
-/* ===== Hero status pill ===== */
 .hero-status {
   display: inline-flex;
   align-items: center;
@@ -145,7 +142,7 @@ a { color: inherit; text-decoration: none; }
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: #2ea043;
+  background: var(--green);
   box-shadow: 0 0 0 0 rgba(46, 160, 67, 0.6);
   animation: pulse 2s infinite;
 }
@@ -156,7 +153,6 @@ a { color: inherit; text-decoration: none; }
   100% { box-shadow: 0 0 0 0 rgba(46, 160, 67, 0); }
 }
 
-/* ===== Hero location ===== */
 .hero-location {
   font-family: var(--mono);
   color: var(--text-dim);
@@ -164,13 +160,13 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 2rem;
 }
 
-/* ===== Hero actions ===== */
 .hero-actions {
   display: flex;
   gap: 1rem;
   flex-wrap: wrap;
 }
 
+/* ===== Buttons ===== */
 .btn {
   display: inline-block;
   padding: 0.85rem 1.75rem;
@@ -238,20 +234,29 @@ a { color: inherit; text-decoration: none; }
 }
 
 .project-card {
+  display: block;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 2rem;
-  transition: transform 0.2s, border-color 0.2s;
-  display: block;
-  cursor: pointer;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+  transition: transform 0.2s, border-color 0.2s;
 }
 
 .project-card:hover {
   transform: translateY(-4px);
   border-color: var(--accent);
+}
+
+.project-card-gallery {
+  cursor: default;
+}
+
+.project-card-gallery:hover {
+  transform: none;
+  border-color: var(--border);
 }
 
 .project-meta {
@@ -304,12 +309,6 @@ a { color: inherit; text-decoration: none; }
   color: var(--accent-hover);
 }
 
-.project-card-gallery { cursor: default; }
-.project-card-gallery:hover {
-  transform: none;
-  border-color: var(--border);
-}
-
 /* ===== CAD gallery ===== */
 .cad-gallery {
   display: grid;
@@ -347,15 +346,15 @@ a { color: inherit; text-decoration: none; }
 }
 
 .cert-card {
+  display: block;
   background: var(--bg-card);
   border: 1px solid var(--border);
   border-radius: 8px;
   padding: 1.75rem;
-  transition: border-color 0.2s, transform 0.2s;
-  display: block;
-  cursor: pointer;
   text-decoration: none;
   color: inherit;
+  cursor: pointer;
+  transition: border-color 0.2s, transform 0.2s;
 }
 
 .cert-card:hover {
@@ -430,27 +429,7 @@ a { color: inherit; text-decoration: none; }
   .nav { padding: 1rem 1.5rem; }
   .nav-links { gap: 1.25rem; }
   .nav-links a { font-size: 0.8rem; }
-  .hero { padding: 0 1.5rem; }
+  .hero { padding: 6rem 1.5rem 2rem; }
   .section { padding: 4rem 1.5rem; }
   .project-card { padding: 1.5rem; }
-}
-/* ===== Final overrides ===== */
-.hero {
-  padding: 6rem 3rem 2rem;
-}
-
-.hero-status {
-  background: rgba(46, 160, 67, 0.08);
-  border: 1px solid rgba(46, 160, 67, 0.4);
-}
-
-.status-dot {
-  background: #2ea043;
-  box-shadow: 0 0 0 0 rgba(46, 160, 67, 0.6);
-}
-
-@keyframes pulse {
-  0% { box-shadow: 0 0 0 0 rgba(46, 160, 67, 0.6); }
-  70% { box-shadow: 0 0 0 8px rgba(46, 160, 67, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(46, 160, 67, 0); }
 }
