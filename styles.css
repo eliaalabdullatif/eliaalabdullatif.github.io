@@ -523,3 +523,7 @@ a { color: inherit; text-decoration: none; }
     linear-gradient(90deg, rgba(255, 255, 255, 0.025) 1px, transparent 1px);
   background-size: 50px 50px;
 }
+.hero-status {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
