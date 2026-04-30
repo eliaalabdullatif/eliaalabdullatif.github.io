@@ -3,67 +3,151 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Elia Al Abdullatif — Portfolio</title>
+  <meta name="description" content="Personal portfolio of Elia Al Abdullatif, Mechanical Engineer and M.S. student in Mechanics and Design at Northeastern University." />
+  <title>Elia Al Abdullatif</title>
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+
   <nav class="nav">
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#certifications">Certifications</a>
-    <a href="#contact">Contact</a>
+    <a href="#hero" class="nav-logo">EA</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#projects">Projects</a>
+      <a href="#certifications">Certifications</a>
+      <a href="#contact">Contact</a>
+    </div>
   </nav>
 
-  <header class="hero">
-    <h1>Hi, I'm Elia 👋</h1>
-    <p>A short tagline about what you do or are learning.</p>
+  <header id="hero" class="hero">
+    <div class="hero-content">
+      <p class="hero-greeting">Hello, I'm</p>
+      <h1>Elia Al Abdullatif</h1>
+      <h2>Mechanical Engineer</h2>
+      <p class="hero-tagline">Boston, MA</p>
+      <div class="hero-actions">
+        <a href="#projects" class="btn btn-primary">View Projects</a>
+        <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+      </div>
+    </div>
   </header>
 
   <main>
-    <section id="about">
-      <h2>About Me</h2>
-      <p>Write 2–3 sentences about yourself. Your background, what you're studying or working on, and what you're interested in.</p>
-    </section>
 
-    <section id="projects">
-      <h2>Projects</h2>
-      <div class="grid">
-        <article class="card">
-          <h3>Project One</h3>
-          <p>One sentence describing what it does.</p>
-          <a href="#">View on GitHub →</a>
-        </article>
-        <article class="card">
-          <h3>Project Two</h3>
-          <p>One sentence describing what it does.</p>
-          <a href="#">View on GitHub →</a>
-        </article>
-        <article class="card">
-          <h3>Project Three</h3>
-          <p>One sentence describing what it does.</p>
-          <a href="#">View on GitHub →</a>
-        </article>
+    <section id="about" class="section">
+      <div class="section-header">
+        <span class="section-number">01</span>
+        <h2>About Me</h2>
+      </div>
+      <div class="about-content">
+        <p>
+          Mechanical Engineering graduate from Michigan State University, now pursuing an M.S. in Mechanics and Design at Northeastern University. My academic focus includes mechanical vibrations, optimization, and design, paired with professional experience at Oman Oil Marketing Company, Occidental Petroleum, and Toyota Motor North America, enhancing operational efficiency and product performance.
+        </p>
+        <p>
+          Fluent in English and Arabic, I'm committed to solving complex engineering challenges with innovative thinking and technical proficiency.
+        </p>
       </div>
     </section>
 
-    <section id="certifications">
-      <h2>Certifications</h2>
-      <ul>
-        <li>Certification Name — Issuing Organization, Year</li>
-        <li>Certification Name — Issuing Organization, Year</li>
-      </ul>
+    <section id="projects" class="section">
+      <div class="section-header">
+        <span class="section-number">02</span>
+        <h2>Projects</h2>
+      </div>
+      <div class="project-grid">
+
+        <a href="segway-controls.pdf" target="_blank" rel="noopener" class="project-card">
+          <div class="project-meta">Northeastern University · Jan 2026 – Apr 2026</div>
+          <h3>Segway Vehicle Control System Design</h3>
+          <p>Modeled and stabilized an inverted-pendulum Segway in MATLAB and Simulink using PID, full-state feedback, reduced-order pole placement, and Luenberger observers. The reduced-order controller required ~18× less peak torque and ~14× less peak power than full-state feedback while maintaining stability.</p>
+          <div class="project-tags">
+            <span>MATLAB</span>
+            <span>Simulink</span>
+            <span>Control Systems</span>
+            <span>State-Space</span>
+          </div>
+          <span class="project-link">View Full Report →</span>
+        </a>
+
+        <div class="project-card project-card-gallery">
+          <div class="project-meta">SOLIDWORKS · 2024 – Present</div>
+          <h3>Three-Arm Bearing Puller</h3>
+          <p>A fully constrained SOLIDWORKS assembly modeling a three-jaw bearing puller — the mechanic's tool used to remove press-fit gears and bearings from shafts. Built around a central threaded drive screw and three symmetric arms connected to a center yoke through bolted pivot joints. Demonstrates symmetric mates, threaded-component assembly, and fastener integration.</p>
+          <div class="cad-gallery">
+            <a href="cad-three-arm-puller.png" target="_blank" rel="noopener"><img src="cad-three-arm-puller.png" alt="Three-arm bearing puller assembly" /></a>
+          </div>
+          <div class="project-tags">
+            <span>SOLIDWORKS</span>
+            <span>Assembly Mates</span>
+            <span>Mechanical Design</span>
+          </div>
+        </div>
+
+        <div class="project-card project-card-gallery">
+          <div class="project-meta">SOLIDWORKS · 2024 – Present</div>
+          <h3>Articulated Robotic Arm with Parallel-Jaw Gripper</h3>
+          <p>A multi-component articulated robotic arm mounted on a workbench fixture, integrating a parallel-jaw gripper modeled as a separate SOLIDWORKS sub-assembly. The gripper uses a four-bar linkage mechanism to keep the jaw faces parallel as they open and close, driven through synchronized pulleys. Demonstrates assembly hierarchy, sub-assembly integration, and width-mate constraints across multiple linkage joints.</p>
+          <div class="cad-gallery">
+            <a href="cad-articulated-arm.png" target="_blank" rel="noopener"><img src="cad-articulated-arm.png" alt="Articulated robotic arm assembly with end-effector and table fixture" /></a>
+            <a href="cad-gripper.png" target="_blank" rel="noopener"><img src="cad-gripper.png" alt="Four-bar linkage parallel-jaw gripper sub-assembly with mounting bracket" /></a>
+          </div>
+          <div class="project-tags">
+            <span>SOLIDWORKS</span>
+            <span>Sub-Assemblies</span>
+            <span>Four-Bar Linkage</span>
+            <span>Mechanism Design</span>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact Me</h2>
-      <p>Email: <a href="mailto:you@example.com">you@example.com</a></p>
-      <p>GitHub: <a href="https://github.com/eliaalabdullatif">@eliaalabdullatif</a></p>
-      <p>LinkedIn: <a href="#">your LinkedIn URL</a></p>
+    <section id="certifications" class="section">
+      <div class="section-header">
+        <span class="section-number">03</span>
+        <h2>Certifications</h2>
+      </div>
+      <div class="cert-grid">
+        <a href="cswa-certificate.pdf" target="_blank" rel="noopener" class="cert-card">
+          <h3>SOLIDWORKS CSWA</h3>
+          <p>Certified SOLIDWORKS Associate</p>
+          <span class="cert-issuer">Dassault Systèmes · Feb 2026</span>
+          <span class="cert-link">View Certificate →</span>
+        </a>
+        <a href="cswp-certificate.pdf" target="_blank" rel="noopener" class="cert-card">
+          <h3>SOLIDWORKS CSWP</h3>
+          <p>Certified SOLIDWORKS Professional</p>
+          <span class="cert-issuer">Dassault Systèmes · Mar 2026</span>
+          <span class="cert-link">View Certificate →</span>
+        </a>
+      </div>
     </section>
+
+    <section id="contact" class="section">
+      <div class="section-header">
+        <span class="section-number">04</span>
+        <h2>Contact Me</h2>
+      </div>
+      <div class="contact-content">
+        <div class="contact-links">
+          <a href="mailto:alabdullatif.e@northeastern.edu" class="contact-link">
+            <span class="contact-label">Email</span>
+            <span class="contact-value">alabdullatif.e@northeastern.edu</span>
+          </a>
+          <a href="tel:+19178621701" class="contact-link">
+            <span class="contact-label">Phone</span>
+            <span class="contact-value">(917) 862-1701</span>
+          </a>
+        </div>
+      </div>
+    </section>
+
   </main>
 
-  <footer>
+  <footer class="footer">
     <p>© 2026 Elia Al Abdullatif</p>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
